@@ -1,0 +1,176 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* Apply Inter font to the whole body */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; /* you can adjust weights individually */
+}
+
+/* Paragraphs */
+p, span, li, a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+/* Buttons and inputs */
+button, input, textarea, select {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+/* Optional: Small text or captions */
+small, .caption {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+/* Optional: Strong or bold text */
+strong, b {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+/* Optional: Code or monospace style fallback */
+code, pre {
+    font-family: 'Inter', monospace;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.heading-dark{
+  color: #1C4D8D;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.heading-light{
+  color: #1581BF ;
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.font-manrope{
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.dark-bg-button{
+  background-color: #1581BF !important;
+  color: white !important;
+}
+/* ===== WHATSAPP FLOAT BUTTON ===== */
+.whatsapp-float {
+  position: fixed !important;
+  bottom: 25px !important;
+  right: 25px;
+  background: #25D366 !important;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+/* Icon */
+.whatsapp-float i {
+  font-size: 20px;
+  font-size: 26px;
+  color: white;
+}
+
+/* Hover Effect */
+.whatsapp-float:hover {
+  background: #1ebe5d;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Click effect */
+.whatsapp-float:active {
+  transform: scale(0.95);
+}
+
+/* ===== MOBILE VERSION ===== */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background-color: #25D366 !important; /* ADD THIS */
+    color: #fff !important; /* ADD THIS */
+
+    z-index: 9999;
+  }
+
+  .whatsapp-float span {
+    display: none;
+  }
+
+  .whatsapp-float i {
+    font-size: 26px;
+    color: white !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

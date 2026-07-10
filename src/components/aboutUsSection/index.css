@@ -1,0 +1,162 @@
+/* ===== SECTION BACKGROUND ===== */
+.about-us-section {
+  background: linear-gradient(to bottom, #f4f8ff, #eef4fb);
+  padding: 60px 0;
+}
+
+/* ===== HEADING ===== */
+.heading-dark {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1c4b8c;
+}
+
+.heading-light {
+  font-size: 1rem;
+  color: #6c8bb0;
+}
+
+/* ===== VALUE BADGE ===== */
+.badge {
+  background: linear-gradient(135deg, #1c4b8c, #2f6bb2);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+  padding: 10px 18px;
+}
+
+/* ===== MAIN CARDS ===== */
+.card {
+  border-radius: 16px;
+  background: #ffffff;
+  border: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* glow border effect */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, #1c4b8c, #00c6ff);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* hover */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== ICON ALIGN ===== */
+.d-flex.align-items-center {
+  gap: 10px;
+}
+
+/* ===== ICON STYLE ===== */
+.text-success {
+  color: #00a86b !important;
+  font-size: 20px;
+}
+
+/* ===== CARD TITLE ===== */
+.text-success + h5,
+h5.text-success {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c4b8c;
+}
+
+/* ===== DESCRIPTION ===== */
+.text-muted-desc {
+  color: #4f6f94;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ===== LIST ===== */
+.list-unstyled li {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #2f5d8a;
+  padding-left: 18px;
+  position: relative;
+}
+
+/* ✔ bullet */
+.list-unstyled li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1c4b8c;
+  font-size: 12px;
+}
+
+/* ===== GREEN NOTE ===== */
+.text-muted-green {
+  color: #2e7d32;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* ===== SMALL CARDS (BOTTOM) ===== */
+.bg-white.rounded {
+  border-radius: 14px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.bg-white.rounded:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* ===== SMALL CARD TITLE ===== */
+.fw-bold {
+  color: #1c4b8c;
+}
+
+/* ===== SMALL CARD TEXT ===== */
+.text-muted.small {
+  color: #6c8bb0;
+  line-height: 1.5;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .about-us-section {
+    padding: 40px 10px;
+  }
+
+  .heading-dark {
+    font-size: 1.8rem;
+  }
+
+  .heading-light {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    margin-bottom: 15px;
+  }
+
+  .text-muted-desc {
+    font-size: 13px;
+  }
+
+  .list-unstyled li {
+    font-size: 12px;
+  }
+
+  .bg-white.rounded {
+    padding: 15px;
+  }
+}

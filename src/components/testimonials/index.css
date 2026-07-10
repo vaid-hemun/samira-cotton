@@ -1,0 +1,140 @@
+/* ===== SECTION ===== */
+.testimonial-container {
+  background: linear-gradient(to bottom, #f5f9ff, #eef4fb);
+}
+
+/* ===== CARD ===== */
+.card {
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 10px;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 70px rgba(28, 75, 140, 0.15);
+}
+
+/* glow border */
+.card-text::before {
+  content: "❝";
+  font-size: 50px;
+  position: absolute;
+  left: -10px;
+  top: -25px;
+  color: rgba(28, 75, 140, 0.15);
+}
+
+/* hover */
+/* .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
+} */
+
+
+/* ===== CARD BODY ===== */
+.card-body {
+  padding: 20px;
+}
+
+/* ===== TITLE ===== */
+.card-title {
+  color: #1c4b8c;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* ===== TEXT ===== */
+.card-text {
+  font-size: 16px;
+  color: #4f6f94 !important;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 15px;
+}
+
+/* quote icon */
+.card-text::before {
+  content: "“";
+  position: absolute;
+  left: -5px;
+  top: -10px;
+  font-size: 28px;
+  color: #1c4b8c;
+}
+
+/* ===== NAME ===== */
+.card-body h6 {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* ===== DESIGNATION ===== */
+.card-body small {
+  color: #7a8fa6;
+}
+
+/* ===== FADE ANIMATION ===== */
+.col-md-4 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.col-md-4:nth-child(1) { animation-delay: 0.2s; }
+.col-md-4:nth-child(2) { animation-delay: 0.4s; }
+.col-md-4:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .card {
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    font-size: 13px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+}
+.card .mb-2 {
+  color: #f4b400;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.card-text {
+  position: relative;
+}
+
+.card-text::before {
+  content: "❝";
+  font-size: 40px;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  color: rgba(28, 75, 140, 0.2);
+}
+.card {
+  animation: fadeSlide 0.6s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
